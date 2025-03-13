@@ -20,6 +20,9 @@ class TestCalculator(unittest.TestCase):
     def test_divide_by_zero(self):
         with self.assertRaises(ValueError):
             self.calc.divide(5, 0)
+    
+    def test_divide_resulting_in_float(self):
+        self.assertEqual(self.calc.divide(5, 2), 2.5)
 
 
 if __name__ == "__main__":
